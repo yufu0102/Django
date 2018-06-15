@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html lang="zxx">
+
+<head>
+	<title>Home</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content=""
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	{% load staticfiles %}
+	<!--// Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+	<!-- Bootstrap-css -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+	<!-- Style-css -->
+	<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+	<!-- Font-Awesome-Icons-css -->
+	<link href="{% static 'css/popuo-box.css' %}" rel="stylesheet" type="text/css" media="all" />
+	<!-- Popup css (for Video Popup) -->
+	<link rel="stylesheet" href="{% static 'css/lightbox.css' %}" type="text/css" media="all">
+	<!-- Lightbox css (for Projects) -->
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="screen" property="" />
+	<!-- Flexslider css (for Testimonials) -->
+	<!-- //css files -->
+	<!-- web-fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Economica:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Rasa:300,400,500,600,700" rel="stylesheet">
+	<!-- //web-fonts -->
+</head>
+
+<body>
+	<div class="main-agile">
+		<!-- banner -->
+		<div class="agile-top">
+			<div class="col-xs-4 logo">
+				<h1>
+					<a href="index.html">
+						<span>A</span>sthma
+				  <span>A</span>nalysis</a>
+				</h1>
+			</div>
+			<div class="col-xs-6 header-w3l">
+				<ul>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#myModal1">
+							<span class="fa fa-unlock-alt" aria-hidden="true"></span> Sign In </a>
+					</li>
+					<li>
+						<a href="#" data-toggle="modal" data-target="#myModal2">
+							<span class="fa fa-pencil-square-o" aria-hidden="true"></span> Sign Up </a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	<!-- signin Model -->
+	<!-- Modal1 -->
+	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body modal-body-sub_agile">
+					<div class="main-mailposi">
+						<span class="fa fa-envelope-o" aria-hidden="true"></span>
+					</div>
+					<div class="modal_body_left modal_body_left1">
+						<h3 class="agileinfo_sign"> Vistor </h3>
+						<p>
+						Don't have an account?
+							<a href="#" data-toggle="modal" data-target="#myModal2">
+								Sign Up Now</a>
+						</p>
+						<form action="#" method="post">
+						{% csrf_token %}
+							<div class="styled-input agile-styled-input-top">
+								<input type="text" placeholder="User Name" name="Name" required>
+							</div>
+							<div class="styled-input">
+								<input type="password" placeholder="Password" name="password" required>
+							</div>
+							<input type="submit" value="Sign In">
+						</form>
+						<div class="clearfix"></div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<!-- //Modal content-->
+		</div>
+	</div>
+	<!-- //Modal1 -->
+	<!-- //signin Model -->
+	<!-- signup Model -->
+	<!-- Modal2 -->
+	<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body modal-body-sub_agile">
+					<div class="main-mailposi">
+						<span class="fa fa-envelope-o" aria-hidden="true"></span>
+					</div>
+					<div class="modal_body_left modal_body_left1">
+						<h3 class="agileinfo_sign">Sign Up</h3>
+						<p>
+							Let's set up your Account.
+						</p>
+						<form action="#" method="post">
+						{% csrf_token %}
+							<div class="styled-input agile-styled-input-top">
+								<input type="text" placeholder="Name" name="Name" required>
+							</div>
+							<div class="styled-input">
+								<input type="email" placeholder="E-mail" name="Email" required>
+							</div>
+							<div class="styled-input">
+								<input type="password" placeholder="Password" name="password" id="password1" required>
+							</div>
+							<div class="styled-input">
+								<input type="password" placeholder="Confirm Password" name="Confirm Password" id="password2" required>
+							</div>
+							<input type="submit" value="Sign Up">
+						</form>
+						<p>
+							<a href="#">By clicking register, I agree to your terms</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- //Modal content-->
+		</div>
+	</div>
+	<!-- //Modal2 -->
+	<!-- //signup Model -->
+
+	<!-- banner-text -->
+	<div class="slider">
+		<div class="callbacks_container">
+			<ul class="rslides callbacks callbacks1" id="slider4">
+				<li>
+					<div class="w3layouts-banner-top banner">
+						<div class="container">
+							<div class="agileits-banner-info">
+									<i class="fa fa-tree" aria-hidden="true"></i>
+								<div class="video-pop-wthree">
+									<div id="small-dialog1" class="mfp-hide w3ls_small_dialog wthree_pop">
+										<iframe src=""></iframe>
+									</div>
+								</div>
+								<div class="thim-click-to-bottom">
+									
+								</div>
+
+							</div>
+						</div>
+					</div>
+					
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+		<!-- //banner-text -->
+	</div>
+	<!-- //banner -->
+
+	<!-- about -->
+	<div class="banner-bottom-w3l" id="about">
+		<div class="container">
+			<div class="title-div">
+				<h3 class="tittle">About Asthma</h3>
+				<div class="tittle-style">
+				</div>
+				<p>asthma air pollution analysis</p>
+			</div>
+			<div class="welcome-sub-wthree">
+			  <div class="clearfix"> </div>
+		  </div>
+		</div>
+        <p>&nbsp;</p>
+	</div>
+	<!-- //about -->
+
+	<!-- contact -->
+<div class="title-div">
+				<h3 class="tittle"><span>P</span>ersonal<span> I</span>nformation
+</h3>
+<div class="col-md-5 banner_bottom_left"><center>
+	<h4>Health Condition</h4></center>
+				<div class="tittle-style">
+	<div class="second-contact-agile"></div>
+	  
+		<div class="col-md-6 address-left-second">
+			<div class="address-grid">
+				<div class="col-md-6 form-bg">
+				 <form action="#" method="post">
+				    {% csrf_token %}
+                    <div class="contact-fields">
+						<input type="number" name="age" placeholder="&nbsp;&nbsp;&nbsp;Age" required min="1" max="99">
+					<br><br>
+						<font color="WHITE">&nbsp;&nbsp;&nbsp;<input type="radio" name="gender" value="1"> Man &nbsp;<input type="radio" name="gender" value="0"> Woman </font><br><br>
+                    </div>
+                    <div class="contact-fields">
+						<font color="WHITE">Smoking Status&nbsp;&nbsp;<input type="radio" name="smoking" value="1"> Yes <input type="radio" name="smoking" value="0"> No </font><br><br>
+                    </div>
+					<div class="contact-fields">
+						<font color="WHITE">Allergy Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="allergy" value="1"> Yes <input type="radio" name="allergy" value="0"> No </font><br><br>
+                    </div>
+					<div class="contact-fields">
+						<font color="WHITE">Rhinosinusitis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="rhinosinusitis" value="1"> Yes <input type="radio" name="rhinosinusitis" value="0"> No </font>
+			        </div>
+					<div class="contact-fields">
+				      <input type="text" name="BH" placeholder="Height(m)" required>
+			        </div>
+					<div class="contact-fields">
+				      <input type="text" name="BW" placeholder="Weight(kg)" required>
+			        </div>              
+					<div class="contact-fields">
+				      <input type="text" name="IgE" placeholder="IgE(KU/L)" required>
+			        </div>					
+					<div class="contact-fields">
+				      <input type="number" name="PFT" placeholder="PFT" required min = "1" max = "3">
+			        </div>
+					<br>
+					<div class="contact-fields">
+				      <input type="text" name="FVC" placeholder="FVC" required>
+			        </div>
+					<div class="contact-fields">
+				      <input type="text" name="FEV1" placeholder="FEV1" required>
+			        </div>          
+                    <div class="contact-fields">
+				      <input type="text" name="PAH" placeholder="PAH" required>
+			        </div>
+                    
+				    <input type="submit" value="Submit">
+			      </form>
+				  <h5> {{ result }} <h5>
+</div>
+</div>	
+<!-- js-scripts -->
+
+	<!-- jquery -->
+	<script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+	<!-- //jquery -->
+
+	<script src="{% static 'js/bootstrap.js' %}"></script>
+	<!-- Necessary-JavaScript-File-For-Bootstrap -->
+
+	<!--  light box js -->
+	<script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+	<!-- //light box js-->
+	
+	<!-- stats numscroller-js-file -->
+	<script src="{% static 'js/numscroller-1.0.js' %}"></script>
+	<!-- //stats numscroller-js-file -->
+	
+	<!-- Baneer-js -->
+	<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!-- //Baneer-js -->
+
+	<!-- navigation -->
+	<script>
+		(function ($) {
+			// Menu Functions
+			$(document).ready(function () {
+				$('#menuToggle').click(function (e) {
+					var $parent = $(this).parent('.menu');
+					$parent.toggleClass("open");
+					var navState = $parent.hasClass('open') ? "hide" : "show";
+					$(this).attr("title", navState + " navigation");
+					// Set the timeout to the animation length in the CSS.
+					setTimeout(function () {
+						console.log("timeout set");
+						$('#menuToggle > span').toggleClass("navClosed").toggleClass("navOpen");
+					}, 200);
+					e.preventDefault();
+				});
+			});
+		})(jQuery);
+	</script>
+	<!-- //navigation -->
+
+	<!-- pop-up(for video popup)-->
+	<script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+	<script>
+		$(document).ready(function () {
+			$('.popup-with-zoom-anim').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+	<!-- //pop-up-box (syllabus section video)-->
+	
+	<!-- video js (background) -->
+	<script src="{% static 'js/jquery.vide.min.js' %}"></script>
+	<!-- //video js (background) -->
+
+	<!-- smoothscroll -->
+	<script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+	<!-- //smoothscroll -->
+
+	<!-- password-script -->
+	<script>
+		window.onload = function () {
+			document.getElementById("password1").onchange = validatePassword;
+			document.getElementById("password2").onchange = validatePassword;
+		}
+
+		function validatePassword() {
+			var pass2 = document.getElementById("password2").value;
+			var pass1 = document.getElementById("password1").value;
+			if (pass1 != pass2)
+				document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+			else
+				document.getElementById("password2").setCustomValidity('');
+			//empty string means no validation error
+		}
+	</script>
+	<!-- //password-script -->
+
+	<!-- start-smooth-scrolling -->
+	<script src="{% static 'js/move-top.js' %}"></script>
+	<script src="{% static 'js/easing.js' %}"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+
+	<!-- smooth scrolling-bottom-to-top -->
+	<script>
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;">
+		<span id="toTopHover" style="opacity: 1;"> </span>
+	</a>
+	<!-- //smooth scrolling-bottom-to-top -->
+
+	<!-- flexSlider (for testimonials) -->
+	<script defer src="{% static 'js/jquery.flexslider.js' %}"></script>
+	<script>
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<!-- //flexSlider (for testimonials) -->
+
+	<!-- //js-scripts -->
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<html>
+
+
+<head>
+	<meta charset=utf-8">
+	<title>Asthma_data_input</title>
+	
+	<SCRIPT Language="JavaScript"></SCRIPT>
+
+	<SCRIPT>
+		function click() { if (event.button==2) { alert("Don't check") } } document.onmousedown=click 
+	
+</SCRIPT></head>
+
+<body	bgcolor="#DBDBDB"	link="BLUE"	vlink="#CD3333"	alink="#B23AEE">
+	
+	<p align="center"><font size="15"><b>Asthma_inquire</b></font></p>
+		<hr size="10"	color="#B22222">
+
+	<p align="lift"><font size="8"	color="#C71585">Please input your personal information</font></p>
+		<font	face="細明體"	size="6"	color="GREEN">
+			<form method="post" enctype="application/x-www-form-urlencoded">
+				{% csrf_token %}
+				<DL><DD>
+					Age: <input type="number" name="age" min="1" max="99">
+						<br>
+					Gender: <font color="BLACK"><input type="radio" name="gender" value="1">男<input type="radio" name="gender" value="0">女</font>
+						<br>
+					吸菸狀況: <font color="BLACK"><input type="radio" name="smoking" value="1">是<input type="radio" name="smoking" value="0">否 吸菸</font>
+						<br>
+					Height: <input type="text" name="BH"><font color="BLACK">(m)</font>
+						<br>
+					Weight: <input type="text" name="BW"><font color="BLACK">(Kg)</font>
+						<br>
+					Allergy: <input type="radio" name="allergy" value="1"> Yes <input type="radio" name="allergy" value="0"> No
+						<br>
+					IgE: <input type="text" name="IgE" min = "0.0" max = "15000.0">
+						<br>
+					Rhinosinusitis: <input type="radio" name="rhinosinusitis" value="1"> Yes <input type="radio" name="rhinosinusitis" value="0"> No
+						<br>
+					PFT: <input type="number" name="PFT" min = "1" max = "3">
+						<br>
+					FVC(用力呼氣肺活量): <input type="text" name="FVC">
+						<br>
+					FEV1(第一秒用力呼氣容量): <input type="text" name="FEV1">
+						<br>
+					PAH: <input type="text" name="PAH" placeholder="PAH">
+						<br>
+					
+				</DL>
+			<button type="submit">查詢結果</button>
+			</form>	
+		</font>
+		<h1>你的氣喘程度預測結果:</h1>
+		<div class="contact-fields">
+			決策樹的結果為:{{ DT_result }}
+		</div><br><br>
+		<div class="contact-fields">
+			隨機森林的結果為:{{ RF_result }}
+		</div>
+		
+			
+</body>
+</html>
